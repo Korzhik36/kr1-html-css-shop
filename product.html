@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Подробное описание товара, его характеристики, преимущества и условия оформления заявки.">
+  <title>Товар 1 — характеристики и описание</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Учебный магазин</a>
+
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html" aria-current="page">О товаре</a></li>
+        <li><a href="order.html">Заказать</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html">Главная</a>
+      <span aria-hidden="true">/</span>
+      <a href="catalog.html">Каталог</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Товар 1</span>
+    </nav>
+
+    <section class="product-intro" aria-labelledby="product-title">
+      <div class="product-intro__visual" aria-hidden="true">
+        <span class="product-intro__number">01</span>
+        <span class="product-intro__label">DEMO PRODUCT</span>
+      </div>
+
+      <div class="product-intro__content">
+        <p class="product-intro__eyebrow">Электроника · Артикул DEMO-001</p>
+        <h1 id="product-title">Товар 1</h1>
+        <p class="product-intro__description">
+          Универсальная демонстрационная модель для учебного интернет-магазина.
+          На этой странице собрана подробная информация, которая помогает
+          покупателю ознакомиться с предложением перед оформлением заявки.
+        </p>
+
+        <div class="product-intro__availability">
+          <span class="product-intro__status" aria-hidden="true"></span>
+          Доступен для заказа
+        </div>
+
+        <p class="product-intro__price">1 000 ₽</p>
+        <p class="product-intro__note">
+          Цена указана в учебных целях и не является реальным коммерческим предложением.
+        </p>
+
+        <div class="product-intro__actions">
+          <a class="button" href="order.html">Оформить заявку</a>
+          <a class="product-intro__back" href="catalog.html">Вернуться в каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-details" aria-labelledby="description-title">
+      <h2 id="description-title">Описание товара</h2>
+      <p>
+        Товар 1 представляет собой пример карточки товара с основными
+        сведениями для покупателя. Страница демонстрирует структуру
+        типового интернет-магазина: описание, характеристики, преимущества
+        и переход к форме заказа.
+      </p>
+      <p>
+        Перед оформлением заявки пользователь может ознакомиться
+        с параметрами товара и задать интересующие вопросы.
+      </p>
+    </section>
+
+    <section class="section product-specifications" aria-labelledby="specifications-title">
+      <h2 id="specifications-title">Технические характеристики</h2>
+
+      <div class="spec-table-wrapper">
+        <table class="spec-table">
+          <caption>Основные характеристики товара 1</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Артикул</th>
+              <td>DEMO-001</td>
+            </tr>
+            <tr>
+              <th scope="row">Категория</th>
+              <td>Электроника</td>
+            </tr>
+            <tr>
+              <th scope="row">Стоимость</th>
+              <td>1 000 ₽</td>
+            </tr>
+            <tr>
+              <th scope="row">Комплектация</th>
+              <td>Базовая</td>
+            </tr>
+            <tr>
+              <th scope="row">Гарантия</th>
+              <td>По условиям учебного проекта</td>
+            </tr>
+            <tr>
+              <th scope="row">Способ оформления</th>
+              <td>Заявка через сайт</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section product-benefits" aria-labelledby="benefits-title">
+      <h2 id="benefits-title">Преимущества</h2>
+
+      <div class="product-benefits__grid">
+        <article class="benefit-card">
+          <span class="benefit-card__number">01</span>
+          <h3>Понятные условия</h3>
+          <p>Основные сведения о товаре собраны на одной странице.</p>
+        </article>
+
+        <article class="benefit-card">
+          <span class="benefit-card__number">02</span>
+          <h3>Простое оформление</h3>
+          <p>Для перехода к заявке достаточно нажать одну кнопку.</p>
+        </article>
+
+        <article class="benefit-card">
+          <span class="benefit-card__number">03</span>
+          <h3>Удобная навигация</h3>
+          <p>Можно быстро вернуться в каталог и посмотреть другие предложения.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="product-callout">
+      <div>
+        <h2>Остались вопросы?</h2>
+        <p>Перейдите к оформлению заявки, чтобы оставить свои контактные данные и комментарий.</p>
+      </div>
+      <a class="button" href="order.html">Перейти к заказу</a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный интернет-магазин.</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+    <a href="index.html">Вернуться на главную</a>
+  </footer>
+</body>
+</html>
