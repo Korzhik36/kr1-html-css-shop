@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация учебного интернет-магазина, график работы и ответы на частые вопросы.">
+  <title>Контакты — Учебный магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Учебный магазин</a>
+
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html">О товаре</a></li>
+        <li><a href="order.html">Заказать</a></li>
+        <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contacts-page">
+    <section class="contacts-hero" aria-labelledby="contacts-title">
+      <p class="contacts-hero__eyebrow">Мы на связи</p>
+      <h1 id="contacts-title">Контакты</h1>
+      <p>
+        Здесь вы можете узнать, как связаться с учебным магазином,
+        ознакомиться с графиком работы и найти ответы на популярные вопросы.
+      </p>
+    </section>
+
+    <section class="contacts-grid" aria-label="Контактная информация">
+      <article class="contact-card">
+        <div class="contact-card__icon" aria-hidden="true">@</div>
+        <h2>Электронная почта</h2>
+        <p>Для вопросов о товарах и учебном проекте.</p>
+        <a href="mailto:shop@example.com">shop@example.com</a>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card__icon" aria-hidden="true">☎</div>
+        <h2>Телефон</h2>
+        <p>Демонстрационный номер для примера контактного блока.</p>
+        <a href="tel:+78000000000">8 (800) 000-00-00</a>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card__icon" aria-hidden="true">◷</div>
+        <h2>График работы</h2>
+        <p>Условный график работы учебного магазина.</p>
+        <span class="contact-card__value">Пн–Пт: 09:00–18:00</span>
+      </article>
+    </section>
+
+    <section class="contacts-main-grid">
+      <article class="contact-info-panel">
+        <h2>Информация о проекте</h2>
+        <p>
+          Учебный интернет-магазин создан в рамках практической работы
+          по веб-разработке. Сайт демонстрирует структуру многостраничного
+          проекта, адаптивную вёрстку и интерактивные элементы.
+        </p>
+
+        <div class="contact-info-panel__item">
+          <span class="contact-info-panel__label">Тип проекта</span>
+          <strong>Учебный интернет-магазин</strong>
+        </div>
+
+        <div class="contact-info-panel__item">
+          <span class="contact-info-panel__label">Основные технологии</span>
+          <strong>HTML5, CSS3, JavaScript</strong>
+        </div>
+
+        <div class="contact-info-panel__item">
+          <span class="contact-info-panel__label">Режим работы сайта</span>
+          <strong>Круглосуточно</strong>
+        </div>
+
+        <p class="contact-info-panel__note">
+          Контактные данные на этой странице демонстрационные.
+          Они не обозначают реальные каналы обслуживания покупателей.
+        </p>
+      </article>
+
+      <aside class="contact-cta">
+        <span class="contact-cta__eyebrow">Нужна консультация?</span>
+        <h2>Остались вопросы по товару?</h2>
+        <p>
+          Перейдите к форме заявки и укажите, какая информация вас интересует.
+        </p>
+        <a class="button" href="order.html">Оставить заявку</a>
+        <a class="contact-cta__link" href="catalog.html">Посмотреть каталог →</a>
+      </aside>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="faq-section__heading">
+        <p class="contacts-hero__eyebrow">FAQ</p>
+        <h2 id="faq-title">Частые вопросы</h2>
+        <p>Краткие ответы на вопросы о работе учебного сайта.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Как посмотреть доступные товары?</summary>
+          <p>
+            Откройте раздел «Каталог» в главном меню.
+            Там представлены демонстрационные товары и их цены.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Как оформить заявку?</summary>
+          <p>
+            Перейдите на страницу «Заказать», заполните обязательные поля
+            формы и подтвердите согласие.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Будут ли мои данные отправлены продавцу?</summary>
+          <p>
+            Нет. Это учебная версия сайта. Форма проверяется в браузере,
+            а данные не отправляются на сервер.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Являются ли цены настоящими?</summary>
+          <p>
+            Нет. Все товары и цены используются исключительно
+            для демонстрации возможностей веб-разработки.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contacts-bottom">
+      <div>
+        <h2>Готовы продолжить?</h2>
+        <p>Выберите товар в каталоге или перейдите к форме заявки.</p>
+      </div>
+      <div class="contacts-bottom__actions">
+        <a class="button" href="catalog.html">Открыть каталог</a>
+        <a class="contacts-bottom__secondary" href="order.html">Оформить заявку</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный интернет-магазин.</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+    <a href="index.html">Вернуться на главную</a>
+  </footer>
+</body>
+</html>
