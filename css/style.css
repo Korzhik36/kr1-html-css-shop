@@ -1497,39 +1497,322 @@ html {
   }
 }
 
-/* Горизонтальное меню навигации */
-header nav {
+/* =========================================================
+   ПРАКТИЧЕСКАЯ РАБОТА №6
+   Flexbox + CSS Grid
+   ========================================================= */
+
+
+/* =========================================================
+   1. FLEXBOX — основная навигация
+   ========================================================= */
+
+.site-nav__list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 24px;
   flex-wrap: wrap;
-}
-
-header nav ul {
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
+  gap: var(--space-md);
+
   padding: 0;
-}
+  margin: var(--space-md) 0 0;
 
-header nav li {
   list-style: none;
 }
 
-header nav a {
+.site-nav__list li {
+  margin-bottom: 0;
+}
+
+.site-nav__list a {
   display: inline-block;
   text-decoration: none;
 }
 
-/* Адаптация для мобильных устройств */
+
+/* =========================================================
+   2. GRID — популярные товары на главной странице
+   ========================================================= */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   3. FLEXBOX — карточка товара
+   ========================================================= */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+
+  min-width: 0;
+  margin-bottom: 0;
+  padding: var(--space-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-bg);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+
+/* =========================================================
+   4. GRID — каталог: фильтры + товары
+   ========================================================= */
+
+.catalog-layout {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+
+  grid-template-areas:
+    "filters products";
+
+  gap: var(--space-lg);
+}
+
+.catalog-filters {
+  grid-area: filters;
+
+  min-width: 0;
+  padding: var(--space-lg);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-surface);
+}
+
+.catalog-products {
+  grid-area: products;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   5. GRID — форма фильтров
+   ========================================================= */
+
+.filters-form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.filters-form fieldset {
+  display: grid;
+  gap: var(--space-sm);
+
+  margin: 0;
+  padding: var(--space-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.filters-form legend {
+  padding: 0 var(--space-xs);
+  font-weight: bold;
+}
+
+.filters-form label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.filters-form input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  font: inherit;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.filters-form input[type="number"]:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.filters-form .button {
+  justify-self: start;
+}
+
+
+/* =========================================================
+   6. GRID — товары внутри каталога
+   ========================================================= */
+
+.catalog-products .products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   7. GRID — существующая сетка каталога
+   Сохраняем поддержку старого класса .catalog-grid
+   ========================================================= */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+
+/* =========================================================
+   8. Адаптация каталога и товаров
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .catalog-layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .products-grid,
+  .catalog-products .products-grid,
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   9. Мобильная версия
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "filters"
+      "products";
+  }
+
+  .products-grid,
+  .catalog-products .products-grid,
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-filters {
+    padding: var(--space-md);
+  }
+}
+
+
+/* =========================================================
+   10. Мобильная навигация
+   ========================================================= */
+
 @media (max-width: 600px) {
-  header nav,
-  header nav ul {
-    gap: 12px;
-    flex-wrap: wrap;
+  .site-nav__list {
+    gap: var(--space-sm);
+    justify-content: flex-start;
+  }
+}
+
+
+/* =========================================================
+   11. Кнопка "Наверх"
+   ========================================================= */
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-4px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   12. Плавная прокрутка
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   13. Адаптация кнопки "Наверх"
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 24px;
   }
 }
