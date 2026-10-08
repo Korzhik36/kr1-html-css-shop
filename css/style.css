@@ -558,9 +558,14 @@ button:disabled {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-bottom: var(--space-lg);
+
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-lg);
+  padding: 0;
+
   color: var(--color-muted);
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
 .breadcrumbs a {

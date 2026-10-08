@@ -7,22 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body id="top">
 
 <header class="site-header">
    <div class="site-header__inner">
     <a class="site-header__logo" href="index.html">ShopProject</a>
 
     <nav class="site-nav" aria-label="Основная навигация">
-      <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#advantages">Преимущества</a></li>
-          <li><a href="index.html#popular">Популярные товары</a></li>
-          <li><a href="index.html#contacts">Обратная связь</a></li>
-      </ul>
-    </nav>
+  <ul class="site-nav__list">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a href="product.html">О товаре</a></li>
+    <li><a href="order.html">Заказать</a></li>
+    <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+    <li><a href="index.html#advantages">Преимущества</a></li>
+    <li><a href="index.html#popular">Популярные товары</a></li>
+    <li><a href="index.html#contacts">Обратная связь</a></li>
+  </ul>
+</nav>
   </div>
 </header>
   
@@ -94,7 +96,9 @@
 </aside>
 
 </main>
-
+<a class="back-to-top" href="#top" aria-label="Вернуться наверх">
+  ↑
+</a>
 <footer id="contacts">
   <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   <p>Дисциплина: Фронтенд и бэкенд разработка</p>
