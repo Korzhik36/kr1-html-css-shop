@@ -91,9 +91,15 @@ html {
    =============================== */
 
 .site-header {
-  max-width: var(--container-width);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
+  padding: var(--space-lg);
   background-color: var(--color-surface);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .site-header__inner {
